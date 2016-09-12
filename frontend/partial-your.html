@@ -1,0 +1,12 @@
+<div class="jumbotron text-center">
+  <h1>Your page</h1>
+</div>
+<form name="form">
+  <p>First name: <input type="text" required = "required" placeholder="First name" ng-model="yourFirstname" ng-blur="modifyYourData(yourFirstname, 'firstname')"/></p>
+  <p>Last name: <input type="text" required = "required" placeholder="Last name" ng-model="yourLastname" ng-blur="modifyYourData(yourLastname, 'lastname')"/></p>
+  <p>E-mail adress: <input type="email" required = "required" placeholder="name@email.com" ng-model="yourEmail" ng-blur="modifyYourData(yourEmail, 'email')"/></p>
+  <p>GitHub profile: <input type="url" placeholder="https://github.com/Name" ng-model="yourGithub" ng-blur="modifyYourData(yourGithub, 'github')"/></p>
+</form>
+<a ui-sref="loggedin" class="btn btn-default">Home</a>
+<a ng-if="admin" ui-sref="admin" class="btn btn-danger">Admin</a>
+<a ng-click="logOut()" class="btn btn-danger">Logout</a>
